@@ -22,7 +22,8 @@ class Adhérent extends Model
         return $this->hasOne('App\Models\Personnel', 'idAdhérent');
     }
 
-    public function reservation(){
-        return $this->hasMany('App\Models\Réservation', 'idReserv');
-    }
+    public function reservations()
+    {
+        return $this->hasMany(Réservation::class, 'idAdhérent');
+    }   
 }

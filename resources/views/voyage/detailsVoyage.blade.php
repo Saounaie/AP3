@@ -22,7 +22,6 @@
     
         <li class="list-disc">{{$unVoyage->idVoyage}}</li>
         <li class="list-disc">{{$unVoyage->duree}} jours</li>
-        <li class="list-disc pb-10">Kallal le meilleur ♥ </li>
     
     </ul>
 

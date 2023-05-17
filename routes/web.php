@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-// use App\Http\Controllers\VoyageController;
+use App\Http\Controllers\VoyageController;
+use App\Http\Controllers\AdherentController;
+use App\Http\Controllers\ReservationController;
 
 
 
@@ -20,7 +22,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/adhérents', [App\Http\Controllers\AdherentsController::class, 'getAdherents']);
+Route::get('/adherents/reservations/{idAdherent}', [App\Http\Controllers\AdherentsController::class, 'index']);
+Route::get('/reservations/{idReserv}', [App\Http\Controllers\ReservationController::class, 'show'])->name('reservations.show');
+Route::get('/createReservation', [App\Http\Controllers\ReservationController::class, 'create'])->name('reservations.create');
+Route::post('/createReservation', [App\Http\Controllers\ReservationController::class, 'store'])->name('reservations.store');
+
+// Route::get('/adherents/reservations/{idAdherent}', [AdherentsController::class], 'index');
 
 Route::get('/evenements', [App\Http\Controllers\EvenementController::class, 'getEvenements']);
 

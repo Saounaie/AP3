@@ -20,11 +20,16 @@ class Réservation extends Model
         "idTypeVoyage",
         "idTarif",
         "idCatégorie",
-        "idEv"
+        "idEv",
+        "voyageID"
     ];
 
     public function adhérent(){
         return $this->belongsTo(Adhérent::class, 'idAdhérent');
+    }
+
+    public function voyage(){
+        return $this->belongsTo(Voyage::class, 'voyageID');
     }
 
     public function visite(){
@@ -46,5 +51,7 @@ class Réservation extends Model
     public function catégorie(){
         return $this->belongsTo(Catégorie::class, 'idCatégorie');
     }
+
+   
     
 }

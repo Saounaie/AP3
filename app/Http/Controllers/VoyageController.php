@@ -7,11 +7,6 @@ use App\Models\Voyage;
 
 class VoyageController extends Controller
 {
-    // public function getVoyage(){
-    //     $voyage = Voyage::all();
-    //     return view('voyage.listeVoyage', ['voyage' =>$voyage]);
-    // }
-
     public function index(){
         $voyage = Voyage::all();
         return view('voyage.gestionVoyage', ['voyage' =>$voyage]);
@@ -28,12 +23,7 @@ class VoyageController extends Controller
         $v->idTypeVoyage=$request->input('typeVoyage');
 
         $v->save();
-
-
-
         return redirect('voyage');
-
-        // METHODE ATTACH
     }
 
     public function edit($id){

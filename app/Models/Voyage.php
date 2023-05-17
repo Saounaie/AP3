@@ -19,11 +19,13 @@ class Voyage extends Model
         "idTypeVoyage"
     ];
 
-    public function reservation(){
-        return $this->belongsToMany('App\Models\Réservation', 'idReserv');
+    public function reservations(){
+        return $this->hasMany('App\Models\Réservation', 'voyageID');
     }
 
     public function typeVoyage(){
         return $this->belongsTo(TypeVoyage::Class, 'idTypeVoyage');
     }
+
+    
 }
