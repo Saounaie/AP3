@@ -20,7 +20,18 @@ class ReservationController extends Controller
         return view ('reservations.createReservation');
     }
 
-    public function store(){
-        
+    public function store(Request $request){
+        $r = new Réservation();
+        $r->idAdhérent = $request->input('idAdhérent');
+        $r->idVisite = $request->input('idVisite');
+        $r->idTypeVoyage=$request->input('idTypeVoyage');
+        $r->idTarif=$request->input('idTarif');
+        $r->idCatégorie=$request->input('idCatégorie');
+        $r->idEv=$request->input('idEv');
+        $r->voyageID=$request->input('voyageID');
+
+        $r->save();
+
+        return redirect()->back();
     }
 }

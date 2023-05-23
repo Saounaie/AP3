@@ -13,8 +13,8 @@
             <form method="post" action="{{route('reservations.store')}}">
                 @csrf
                 <div class="mb-4">
-                    <label for="idAdherent" class="block font-medium text-gray-700">ID de l'adhérent :</label>
-                    <input type="text" id="idAdherent" name="idAdherent" class="mt-1 px-4 py-2 w-full border-gray-800 bg-gray-200 rounded">
+                    <label for="idAdhérent" class="block font-medium text-gray-700">ID de l'adhérent :</label>
+                    <input type="text" id="idAdhérent" name="idAdhérent" class="mt-1 px-4 py-2 w-full border-gray-800 bg-gray-200 rounded">
                 </div>
                 <div class="mb-4">
                     <label for="idVisite" class="block font-medium text-gray-700">ID de la visite :</label>
@@ -29,8 +29,8 @@
                     <input type="text" id="idTarif" name="idTarif" class="mt-1 px-4 py-2 w-full border-gray-300 bg-gray-200 rounded">
                 </div>
                 <div class="mb-4">
-                    <label for="idCategorie" class="block font-medium text-gray-700">ID de la catégorie :</label>
-                    <input type="text" id="idCategorie" name="idCategorie" class="mt-1 px-4 py-2 w-full border-gray-300 bg-gray-200 rounded">
+                    <label for="idCatégorie" class="block font-medium text-gray-700">ID de la catégorie :</label>
+                    <input type="text" id="idCatégorie" name="idCatégorie" class="mt-1 px-4 py-2 w-full border-gray-300 bg-gray-200 rounded">
                 </div>
                 <div class="mb-4">
                     <label for="idEv" class="block font-medium text-gray-700">ID de l'événement :</label>

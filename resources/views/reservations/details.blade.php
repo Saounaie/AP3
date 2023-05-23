@@ -14,6 +14,7 @@
 
         <div class="bg-white rounded shadow-md p-6">
             <h2 class="text-xl font-bold mb-4">Lieu : {{ $voyage->lieu }}</h2>
+            <p class="mb-4"><strong>ID :</strong> {{ $voyage->idVoyage }}</p>
             <p class="mb-4"><strong>Durée :</strong> {{ $voyage->duree }} jours</p>
             <p class="mb-4"><strong>Type Voyage :</strong> {{ $voyage->idTypeVoyage }}</p>
             <!-- Ajoute les autres informations du voyage à afficher -->
