@@ -23,6 +23,13 @@ Route::get('/', function () {
 });
 
 Route::get('/adherents/reservations/{idAdherent}', [App\Http\Controllers\AdherentsController::class, 'index']);
+Route::get('/adherents/reservations/1', [App\Http\Controllers\AdherentsController::class, 'admin'])->name('adherents.admin');
+
+// Route::get('/adherents/reservations/{idAdherent}', [AdherentController::class, 'reservations'])
+//     ->name('adherents.reservations')
+//     ->middleware('auth');
+
+Auth::routes();
 Route::get('/reservations/{idReserv}', [App\Http\Controllers\ReservationController::class, 'show'])->name('reservations.show');
 Route::get('/createReservation', [App\Http\Controllers\ReservationController::class, 'create'])->name('reservations.create');
 Route::post('/createReservation', [App\Http\Controllers\ReservationController::class, 'store'])->name('reservations.store');

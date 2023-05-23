@@ -18,7 +18,11 @@
                 </div>
                 <div class="mb-4">
                     <label for="idVisite" class="block font-medium text-gray-700">ID de la visite :</label>
-                    <input type="text" id="idVisite" name="idVisite" class="mt-1 px-4 py-2 w-full border-gray-300 bg-gray-200 rounded">
+                    <select id="idVisite" name="idVisite" class="mt-1 px-4 py-2 w-full border-gray-300 bg-gray-200 rounded">
+                        @foreach ($visites as $visite)
+                            <option value="{{ $visite->id }}">{{ $visite->idVisite }}</option>
+                        @endforeach
+                    </select>
                 </div>
                 <div class="mb-4">
                     <label for="idTypeVoyage" class="block font-medium text-gray-700">ID du type de voyage :</label>

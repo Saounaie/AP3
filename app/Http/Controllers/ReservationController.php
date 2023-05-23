@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Réservation;
+use App\Models\Visite;
 use App\Models\Voyage;
 
 class ReservationController extends Controller
@@ -17,7 +18,9 @@ class ReservationController extends Controller
     }
     
     public function create(){
-        return view ('reservations.createReservation');
+        $visites = Visite::all();
+
+        return view ('reservations.createReservation', ['visites' => $visites]);
     }
 
     public function store(Request $request){
